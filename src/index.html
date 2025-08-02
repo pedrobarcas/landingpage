@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Pedro Barcas (GitHub: @pedrobarcas)">
-    <meta name="description" content="ClarityAI. Uma nova alavancagem para seu próspero negócio.">    
+    <meta name="description" content="ClarityAI. Uma nova alavancagem para seu próspero negócio.">
+    <meta name="keywords" content="ClarityAI, Landing Page, HTML, CSS, JavaScript, Responsive Design">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <title>ClarityAI</title>
@@ -16,15 +17,15 @@
             <span class="fa-brands fa-slack"></span>
         </div>
         <nav class="main-nav-bar">
-            <a href="#">Home<span class="fa-solid fa-chevron-down"></span></a>
-            <a href="#">Funcionalidades<span class="fa-solid fa-chevron-down"></span></a>
-            <a href="#">Preços<span class="fa-solid fa-chevron-down"></span></a>
-            <a href="#">Contato<span class="fa-solid fa-chevron-down"></span></a>
+            <a href="#home">Home<span class="fa-solid fa-chevron-down"></span></a>
+            <a href="#function">Funcionalidades<span class="fa-solid fa-chevron-down"></span></a>
+            <a href="#price">Preços<span class="fa-solid fa-chevron-down"></span></a>
+            <a href="#contact">Contato<span class="fa-solid fa-chevron-down"></span></a>
         </nav>
     </header>
 
-    <main class="main-content">
-        <div>
+    <main class="main-content" id="home">
+        <div class="main-content-text">
             <h1>Um novo <span id="accent-text">recomeço</span> para o seu negócio</h1>
             <p>Confiança é oque nos define. Vamos alavancar seu negócio de uma forma incrivel</p>
         </div>
@@ -32,19 +33,19 @@
         <button>Experimente o ClarityAI</button>
     </main>
 
-    <section class="mockup-phone">
+    <section class="mockup-phone" id="function">
         <img src="../public/mockup-mobile-2.png" style="width: 70vw; height: 100vh;" alt="Imagem descritiva de uma conversa sobre um cliente elogiando nossa marca" class="mockup">
-        <h2>Produtos de <span style="color: black">alta confiabilidade</span> no mercado.</h3>
+        <h2>Produtos de <span style="color: black">alta confiabilidade</span> no mercado.</h2>
     </section>
 
-    <section class="main-brands">
-        <div class="main-logo">
+    <section class="main-brands" id="brand">
+        <div class="main-logo" style="color: var(--secondary-color);">
             <span class="fa-brands fa-slack"></span>
         </div>
         <div class="references">
             <h3> Usado por grandes marcas do mundo!</h3> <!-- Colocar efeito de texto aqui -->
             <blockquote>
-                <span class="fa-solid fa-chevron-right"></span>"Decisões inteligentes, impulsinada por dados."
+                <span class="fa-solid fa-chevron-right"></span>"Decisões inteligentes, impulsionada por dados."
             </blockquote>
         </div>
 
@@ -59,33 +60,52 @@
         </div>
     </section>
 
-    <section class="main-plans">
-        <h4 style="margin-bottom: 100px; font-size: 3rem;">Planos super em conta!</h4>
+    <section class="main-plans" id="price">
+        <h4>Planos super em conta!</h4>
 
-        <div class="plans">
+        <div class="plans"> <!-- Adicionar personalidade-->
             <div class="plan-pro category">
                 
-                <p>Plano Pro <span class="fa-solid fa-globe"></span></p>
+                <p><span class="fa-solid fa-globe" style="color: blue;"></span></p>
+                <p>Plano Pro</p>
                 <div class="prices">
                     <p class="price">3.800R$</p>
                     <p>3.200R$</p>
                 </div>
             </div>
             <div class="plan-premium category">
-                <p>Plano Premium <span class="fa-solid fa-crown"></span></p>
+                <p><span class="fa-solid fa-star" style="color: yellow;"></span></p>
+                <p>Plano Premium</p>
                 <div class="prices">
                     <p class="price">8.200R$</p>
                     <p>6.400$</p>
                 </div>
             </div>
             <div class="plan-gold category">
-                <p>Plano Gold <span class="fa-solid fa-coins"></span></p>
+                <p><span class="fa-solid fa-crown" style="color: gold;"></span></p>
+                <p>Plano Gold</p>
                 <div class="prices">
                     <p class="price">14.000R$</p>
                     <p>11.300R$</p>
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="main-contact" id="contact">
+        <div class="main-logo" style="color: var(--acent-color);" aria-label="WhatsApp">
+            <span class="fa-brands fa-whatsapp"></span>
+        </div>
+        <div class="main-contact-content">
+            <h5>Entre em contato conosco!</h5>
+            <p> E agende uma consulta com a nossa equipe</p>
+        </div>
+
+        <form class="main-contact-form">
+            <input type="text" placeholder="(00) 00000-0000" id="number">
+            <button type="submit">Agendar</button>
+        </form>
+ 
     </section>
 
     <script src="./script.js"></script>
