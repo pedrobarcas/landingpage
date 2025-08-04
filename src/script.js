@@ -12,7 +12,17 @@ navLinks.forEach(link => {
     
 });
 
+const main_content = document.querySelector('.main-content');
+const main_header = document.querySelector('.main-header');
+const scrollY = window.scrollY
 
-window.addEventListener('resize', () => {
-    console.log(`Largura da janela: ${window.innerWidth}px`);
+window.addEventListener('scroll', () => {
+    main_content.style.opacity = window.scrollY > 100 ? '0': '1';
+    main_header.style.backgroundColor = window.scrollY > 1200 && window.scrollY < 1850 ? 'var(--secondary-color)' : 'var(--acent-color)';
+    main_header.style.backgroundColor = window.scrollY > 2580 && window.scrollY < 3270 ? 'var(--secondary-color)' : 'var(--acent-color)'
 })
+
+window.addEventListener('scroll', () => {
+    console.log(window.scrollY);
+})
+
